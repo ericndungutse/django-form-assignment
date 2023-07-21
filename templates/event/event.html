@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 {%block content %}
 <div class="card w-75" style="margin: auto; padding-bottom: 15px">
-  <h3 class="card-header display-6 fs-3 fw-light">
+  <h3 class="card-header display-6 fs-3 fw-light bg-primary text-white">
     <small class="fs-2 fw-normal">Title</small>: {{event.title}}
   </h3>
 
@@ -28,9 +28,9 @@
       <div class="col">
         <h5 class="card-title">Entrance</h5>
         {% if event.is_free %}
-        <span class="badge text-bg-success">Free</span>
+        <span class="badge badge-info">Free</span>
         {% else %}
-        <span class="badge text-bg-success">Paid</span>
+        <span class="badge badge-info">Paid</span>
         {% endif %}
       </div>
     </div>
@@ -41,15 +41,11 @@
       <div class="row">
         <div class="col">
           Starts on:
-          <span class="badge rounded-pill text-bg-info"
-            >{{event.start_date}}</span
-          >
+          <span class="badge badge-warning">{{event.start_date}}</span>
         </div>
         <div class="col">
           Ends on :
-          <span class="badge rounded-pill text-bg-info"
-            >{{event.end_date}}</span
-          >
+          <span class="badge badge-warning">{{event.end_date}}</span>
         </div>
       </div>
     </div>
